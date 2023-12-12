@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "helper.h"
 
-// Solutions for Advent of Code Day 2
-// https://adventofcode.com/2023/day/2
+/**
+ * Solutions for the 2023 Advent of Code day 2
+ * 
+ * https://adventofcode.com/2023/day/2
+*/
 
 /*
  * Returns the number of games in the file which can be played with at most r, g, b
