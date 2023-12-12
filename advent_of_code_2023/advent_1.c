@@ -106,7 +106,7 @@ int part_2(FILE *f) {
 }
 
 void main() {
-    FILE *f = fopen("input.txt", "r");
+    FILE *f = fopen("advent_1.txt", "r");
 
     printf("Part 1 Solution: %d\n", part_1(f));
     printf("Part 2 Solution: %d\n", part_2(f));
