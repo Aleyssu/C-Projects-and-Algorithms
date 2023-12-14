@@ -1,2 +1,3 @@
 # C-Projects-and-Algorithms
-C projects from school assignments and practice implementing algorithms
+
+C/C++ projects from school assignments, practice implementing algorithms, and doing programming challenges.
