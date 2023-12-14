@@ -30,9 +30,9 @@ void arr_readn(FILE *f, size_t count, int *arr) {
  * string.
  *
  * Returns true if a newline character is reached (indicating
- * that an entire line of the file was read). Returns false
- * if the last character read was not the newline character,
- * or if reading from the file failed for some reason.
+ * that an entire line of the file was read), or if the max length 
+ * is exceeded. Returns false if reading from the file failed for 
+ * some reason.
  *
  * Does not close the file f.
  */
@@ -53,6 +53,8 @@ bool arr_readline(FILE *f, size_t max_length, char *s) {
             return false;
         }
     }
+	s[max_length] = '\0';
+    return true;
 }
 
 
