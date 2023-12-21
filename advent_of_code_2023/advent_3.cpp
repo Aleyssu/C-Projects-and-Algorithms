@@ -207,4 +207,5 @@ int main() {
 
     cout << "Part 1: " << part_1(f) << '\n';
     cout << "Part 2: " << part_2(f) << '\n';
+    f.close();
 }

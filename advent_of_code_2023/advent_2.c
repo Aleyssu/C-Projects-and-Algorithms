@@ -129,4 +129,5 @@ void main() {
 
     printf("Part 1: %d\n", part_1(f, 12, 13, 14));
     printf("Part 2: %d\n", part_2(f));
+	fclose(f);
 }
