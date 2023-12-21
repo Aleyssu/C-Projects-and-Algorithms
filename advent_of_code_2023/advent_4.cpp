@@ -73,7 +73,43 @@ int part_1(ifstream &f) {
 
 // Part two of the day's solutions - assumes that every line is the same length.
 int part_2(ifstream &f) {
-    return 0;
+    f.clear();
+    f.seekg(0);
+    int sum = 0, num, points;
+    char c = 1;
+    string s;
+    unordered_set<int> winning_nums;
+    queue<int> copies;
+    
+    while (c && c != EOF) {
+        for (c = f.get(); c != ':'; c = f.get());
+        num =  get_num(f, c);
+        while (num && c != '|') {
+            winning_nums.insert(num);
+            num = get_num(f, c);
+        } 
+        num = get_num(f, c);
+        points = 0;
+        while (num) {
+            if (winning_nums.find(num) != winning_nums.end()) {
+                points++;
+            }
+            if (c == '\n' || c == EOF) break;
+            num = get_num(f, c);
+        } 
+        winning_nums.clear();
+        if (copies.size() < points) {
+            while (points > copies.size()) {
+                copies.push(1);
+            }
+        }
+        while (points > 0) {
+            // Fix to get front element of queue and traverse down it
+            copies.front();
+            points--;
+        }
+    }
+    return sum;
 }
 
 
